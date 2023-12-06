@@ -1,0 +1,13 @@
+--Banco: postgres
+
+CREATE TABLE public.tbpessoa
+(
+    pescodigo serial NOT NULL,
+    pesnome varchar(60),
+    pessobrenome varchar(60),
+    pesdatanascimento date,
+    pesemail text,
+    pessenha varchar,
+    CONSTRAINT pk_pessoa PRIMARY KEY (pescodigo),
+    CONSTRAINT pesemail_key UNIQUE (pesemail)
+)
